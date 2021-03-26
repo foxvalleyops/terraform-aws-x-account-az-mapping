@@ -1,0 +1,1 @@
+# terraform-aws-x-account-az-mapping
