@@ -29,8 +29,8 @@ variable "primary_zone_map" {
   type = object({
     zone = object({
       ZoneName = string
-      ZoneID = string
-    })})
+      ZoneID   = string
+  }) })
 
   description = "Map of zones from the primary aws account to sync availability zones between aws accounts for cost optimizations"
 }
@@ -38,6 +38,6 @@ variable "primary_zone_map" {
 locals {
   account_zone_map = {
     for zone in data.aws_availability_zones.ou_zones.zone_ids :
-      zone => element( data.aws_availability_zones.ou_zones.names ,index(data.aws_availability_zones.ou_zones.zone_ids, zone))
+    zone => element(data.aws_availability_zones.ou_zones.names, index(data.aws_availability_zones.ou_zones.zone_ids, zone))
   }
 }

@@ -48,7 +48,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_primary_zone_map"></a> [primary\_zone\_map](#input\_primary\_zone\_map) | Map of zones from the primary aws account to sync availability zones between aws accounts for cost optimizations | <pre>object({<br>    zone = object({<br>      ZoneName = string<br>      ZoneID = string<br>    })})</pre> | n/a | yes |
+| <a name="input_primary_zone_map"></a> [primary\_zone\_map](#input\_primary\_zone\_map) | Map of zones from the primary aws account to sync availability zones between aws accounts for cost optimizations | <pre>object({<br>    zone = object({<br>      ZoneName = string<br>      ZoneID   = string<br>  }) })</pre> | n/a | yes |
 
 ## Outputs
 
